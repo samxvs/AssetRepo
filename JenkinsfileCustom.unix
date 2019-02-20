@@ -37,6 +37,31 @@ pipeline {
 		sh "${env.SAG_HOME}/common/lib/ant/bin/ant -DSAGHome=${env.SAG_HOME} -DSAG_CI_HOME=${env.SAG_CI_HOME} -DprojectName=${env.JOB_NAME} test"
 		junit 'report/'
             }
+	    stage('Create base docker file'){
+            steps {
+                sh "/opt/softwareag/wmmsrdev/IntegrationServer/docker/is_container.sh createDockerfile"
+            }
+        }
+       stage('Build base MSR image'){
+            steps {
+                sh "/opt/softwareag/wmmsrdev/IntegrationServer/docker/is_container.sh build -Dimage.name=is:msr"
+            }
+        }
+		stage('Create package docker file'){
+            steps {
+                sh "/opt/softwareag/wmmsrdev/IntegrationServer/docker/is_container.sh createPackageDockerfile -Dimage.name=is:msr -Dpackage.list=all"
+            }
+        }
+		stage('Build MSR image with packages'){
+            steps {
+                sh "/opt/softwareag/wmmsrdev/IntegrationServer/docker/is_container.sh buildPackage -Dimage.name=is:msrPkg"
+            }
+        }
+		stage('Push MSR image to docker registry'){
+            steps {
+                sh '/opt/softwareag/wmmsrdev/IntegrationServer/docker/is_container.sh pushImage -Duser=krishnajc -Dpassword=${dockerpassword} -Dserver=docker.io -Drepository.name=krishnajc -Dimage.name=is:msrPkg'
+            }
+        }
         }
     }
 }
