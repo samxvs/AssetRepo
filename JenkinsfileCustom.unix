@@ -60,7 +60,7 @@ pipeline {
         }
 		stage('Push MSR image to docker registry'){
             steps {
-                sh '${MSR_TARGET_DOCKER}/is_container.sh pushImage -Duser=${DockerRegistryUser} -Dpassword=${DockerRegistryPassword} -Dserver=${DockerRegistryUrl} -Drepository.name=${DockerRepositoryName} -Dimage.name=msr:${Tag}'
+                sh '${MSR_TARGET_DOCKER}/is_container.sh pushImage -Duser=${DockerRegistryUser} -Dpassword=${DockerRegistryPassword} -Dserver=${DockerRegistryUrl} -Drepository.name=${DockerRepositoryName} -Dimage.name=is:${Tag}'
             }
         }
         }
