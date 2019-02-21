@@ -40,27 +40,27 @@ pipeline {
 	    }
 	    stage('Create base docker file'){
             steps {
-                sh "/opt/softwareag/wmmsrdev/IntegrationServer/docker/is_container.sh createDockerfile"
+                sh "${MSR_TARGET_DOCKER}/is_container.sh createDockerfile"
             }
         }
        stage('Build base MSR image'){
             steps {
-                sh "/opt/softwareag/wmmsrdev/IntegrationServer/docker/is_container.sh build -Dimage.name=is:msr"
+                sh "${MSR_TARGET_DOCKER}/is_container.sh build -Dimage.name=is:msr"
             }
         }
 		stage('Create package docker file'){
             steps {
-                sh "/opt/softwareag/wmmsrdev/IntegrationServer/docker/is_container.sh createPackageDockerfile -Dimage.name=is:msr -Dpackage.list=all"
+                sh "${MSR_TARGET_DOCKER}/is_container.sh createPackageDockerfile -Dimage.name=is:msr -Dpackage.list=all"
             }
         }
 		stage('Build MSR image with packages'){
             steps {
-                sh "/opt/softwareag/wmmsrdev/IntegrationServer/docker/is_container.sh buildPackage -Dimage.name=is:msrPkg"
+                sh "${MSR_TARGET_DOCKER}/is_container.sh buildPackage -Dimage.name=is:${Tag}"
             }
         }
 		stage('Push MSR image to docker registry'){
             steps {
-                sh '/opt/softwareag/wmmsrdev/IntegrationServer/docker/is_container.sh pushImage -Duser=krishnajc -Dpassword=${dockerpassword} -Dserver=docker.io -Drepository.name=krishnajc -Dimage.name=is:msrPkg'
+                sh '${MSR_TARGET_DOCKER}/is_container.sh pushImage -Duser=${DockerRegistryUser} -Dpassword=${DockerRegistryPassword} -Dserver=${DockerRegistryUrl} -Drepository.name=${DockerRepositoryName} -Dimage.name=msr:${Tag}'
             }
         }
         }
