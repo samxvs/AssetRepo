@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<webMethodsTestSuite description="" name="wmTestSuite.xml">
+<webMethodsTestSuite description="" name="CustomerTest">
     <webMethodsTestCase name="Get Customers">
         <service folder="Customers.services" name="getCustomers">
             <input>
