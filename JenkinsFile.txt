@@ -8,12 +8,12 @@ pipeline {
         }
 	stage('Create base docker file'){
             steps {
-                sh "$sudo {MSR_TARGET_DOCKER}/is_container.sh createDockerfile"
+                sh "${MSR_TARGET_DOCKER}/is_container.sh createDockerfile"
             }
         }
 	stage('Build base MSR image'){
             steps {
-                sh "$sudo {MSR_TARGET_DOCKER}/is_container.sh build -Dimage.name=is:msr"
+                sh "${MSR_TARGET_DOCKER}/is_container.sh build -Dimage.name=is:msr"
             }
         }
      }
