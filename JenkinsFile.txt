@@ -6,21 +6,14 @@ pipeline {
                 sh 'chmod -R 777 ${WORKSPACE}'
             }
         }
-	stage('Copy Packages from GIT'){
-	steps{
-		sh "$cp -r /var/lib/jenkins/workspace/Acc_MSR_CICD/assets/IS/Packages/Customers /opt/softwareag/IntegrationServer/packages"
-		sh "$cp -r /var/lib/jenkins/workspace/Acc_MSR_CICD/assets/IS/Packages/Employee /opt/softwareag/IntegrationServer/packages"
-		}
-		}
-	
 	stage('Create base docker file'){
             steps {
-                sh "${MSR_TARGET_DOCKER}/is_container.sh createDockerfile"
+                sh "$sudo {MSR_TARGET_DOCKER}/is_container.sh createDockerfile"
             }
         }
 	stage('Build base MSR image'){
             steps {
-                sh "${MSR_TARGET_DOCKER}/is_container.sh build -Dimage.name=is:msr"
+                sh "$sudo {MSR_TARGET_DOCKER}/is_container.sh build -Dimage.name=is:msr"
             }
         }
      }
