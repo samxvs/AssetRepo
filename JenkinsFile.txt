@@ -7,10 +7,9 @@ pipeline {
                 sh 'chmod -R 777 ${WORKSPACE}'
             }
         }
-	Stage('Get Packages from Git)
+	stage('Get Packages from Git)
 	   steps{
-	   sh "$cp "{GIT_Path}/IS/Packages/Customers" "/opt/Softwareag/IntegrationServer/packages/""
-	   sh "$cp "{GIT_Path}/IS/Packages/Customers" "/opt/Softwareag/IntegrationServer/packages/""
+	   
 	   }
 	   }
 	stage('Create base docker file'){
