@@ -8,8 +8,7 @@ pipeline {
         }
 	stage('Copy Packages from GIT'){
 	steps{
-		sh "$cp /var/lib/jenkins/workspace/Acc_MSR_CICD/assets/IS/Packages/Customers/ /opt/softwareag/IntegrationServer/packages/"
-		sh "$cp /var/lib/jenkins/workspace/Acc_MSR_CICD/assets/IS/Packages/Employee/ /opt/softwareag/IntegrationServer/packages/"
+		sh '${WORKSPACE}/copyPackages.sh
 		}
 		}
 	stage('Create base docker file'){
