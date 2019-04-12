@@ -1,12 +1,6 @@
 pipeline {
-    agent any 
-
+    agent any
     stages {
-	stage('Get Packages from Git)
-	   steps{
-	   
-	   }
-	   }
 	stage('Create base docker file'){
             steps {
                 sh "${MSR_TARGET_DOCKER}/is_container.sh createDockerfile"
@@ -16,6 +10,6 @@ pipeline {
             steps {
                 sh "${MSR_TARGET_DOCKER}/is_container.sh build -Dimage.name=is:msr"
             }
-        }	
+        }
+     }
     }
-
