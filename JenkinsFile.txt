@@ -24,7 +24,7 @@ pipeline {
         }
 	stage('Create package docker files'){
             steps {
-                sh "${MSR_TARGET_DOCKER}/is_container.sh createPackageDockerfile -Dimage.name=is:msr -Dpackage.list=Customers -		Dfile.name=CustomerMSR"
+                sh "${MSR_TARGET_DOCKER}/is_container.sh createPackageDockerfile -Dimage.name=is:msr -Dpackage.list=Customers -Dfile.name=CustomerMSR"
 		echo "Customers package docker file created"
 		sh "${MSR_TARGET_DOCKER}/is_container.sh createPackageDockerfile -Dimage.name=is:msr -Dpackage.list=Employee -Dfile.name=EmployeeMSR"
 		echo "Employee package docker file created"
