@@ -28,7 +28,6 @@ pipeline {
 		echo "Customers package docker file created"
 		sh "${MSR_TARGET_DOCKER}/is_container.sh createPackageDockerfile -Dimage.name=is:msr -Dpackage.list=Employee -Dfile.name=EmployeeMSR"
 		echo "Employee package docker file created"
-
             }
         }
 	stage('Build MSR image with packages'){
@@ -37,7 +36,6 @@ pipeline {
 		echo "Customers MSR image built successfully"
 		 sh "${MSR_TARGET_DOCKER}/is_container.sh buildPackage -Dimage.name=is:${EmployeeTag} -Dfile.name=EmployeeMSR"
 		echo "Employee MSR image built successfully"
-
             }
         }
      }
