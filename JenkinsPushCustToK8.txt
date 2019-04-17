@@ -1,10 +1,15 @@
 pipeline {
-    agent any 
-stages {
-        stage('Run kubectl') {
-      steps {
-          sh "kubectl get pods"
-      }
-    }
+    agent any
+    stages {
+    	stage('Initialize'){
+            steps {
+                sh 'chmod -R 777 ${WORKSPACE}'
+            }
+        }
+	stage('Push Customer image To K8'){
+		steps{
+		sh '${WORKSPACE}/.sh'
+	    }
+	}
     }
 } 
