@@ -19,7 +19,7 @@ pipeline {
         }
 	stage('Build base MSR image'){
             steps {
-                sh "${MSR_TARGET_DOCKER}/is_container.sh build -Dimage.name=is:{BaseMSRTag}"
+                sh "${MSR_TARGET_DOCKER}/is_container.sh build -Dimage.name=is:BaseMSRImage"
             }
         }
 	stage('Push Base image to docker registry'){
