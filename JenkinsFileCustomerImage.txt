@@ -1,28 +1,22 @@
 pipeline {
     agent any
 	stages {
-	stage('Create package docker files'){
+	stage('Create Customer docker files'){
             steps {
                 sh "${MSR_TARGET_DOCKER}/is_container.sh createPackageDockerfile -Dimage.name=is:msr -Dpackage.list=Customers -Dfile.name=CustomerMSR"
 		echo "Customers package docker file created"
-		sh "${MSR_TARGET_DOCKER}/is_container.sh createPackageDockerfile -Dimage.name=is:msr -Dpackage.list=Employee -Dfile.name=EmployeeMSR"
-		echo "Employee package docker file created"
             }
         }
-	stage('Build MSR image with packages'){
+	stage('Build Customer Image'){
             steps{
                 sh "${MSR_TARGET_DOCKER}/is_container.sh buildPackage -Dimage.name=is:${CustomerTag} -Dfile.name=CustomerMSR"
 		echo "Customers MSR image built successfully"
-		sh "${MSR_TARGET_DOCKER}/is_container.sh buildPackage -Dimage.name=is:${EmployeeTag} -Dfile.name=EmployeeMSR"
-		echo "Employee MSR image built successfully"
             }
         }
-	stage('Push MSR image to docker registry'){
+	stage('Push Customer image to docker registry'){
             steps {
                 sh '${MSR_TARGET_DOCKER}/is_container.sh pushImage -Duser=${DockerRegistryUser} -Dpassword=${DockerRegistryPassword} -Dserver=${DockerRegistryUrl} -Drepository.name=${DockerRepositoryName} -Dimage.name=is:${CustomerTag}'
 		echo "Uploaded Customers MSR image built successfully"
-		sh '${MSR_TARGET_DOCKER}/is_container.sh pushImage -Duser=${DockerRegistryUser} -Dpassword=${DockerRegistryPassword} -Dserver=${DockerRegistryUrl} -Drepository.name=${DockerRepositoryName} -Dimage.name=is:${EmployeeTag}'
-		echo "Uploaded Employee MSR image built successfully"
             	}
         	}
 	}
