@@ -739,6 +739,9 @@
 
 <MAPDELETE FIELD="/searchCriteria;2;0">
 </MAPDELETE>
+
+<MAPDELETE FIELD="/id;1;0">
+</MAPDELETE>
 </MAP>
 </INVOKE>
 </SEQUENCE>
