@@ -1,0 +1,456 @@
+{
+	"info": {
+		"_postman_id": "5055b6bc-705e-4fcc-9fa4-8e3b908c400b",
+		"name": "EmployeeRestDescriptor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "employees",
+			"item": [
+				{
+					"name": "withoutalias",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "manage",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Administrator",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://vvaipresal31826.eur.ad.sag:5555/rad/Employees.apis:EmployeeRestDescriptor/employees",
+							"protocol": "http",
+							"host": [
+								"vvaipresal31826",
+								"eur",
+								"ad",
+								"sag"
+							],
+							"port": "5555",
+							"path": [
+								"rad",
+								"Employees.apis:EmployeeRestDescriptor",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "k8cluster1",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "manage",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Administrator",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://vvaipresal31826.eur.ad.sag:5555/rad/Employees.apis:EmployeeRestDescriptor/employees",
+							"protocol": "http",
+							"host": [
+								"vvaipresal31826",
+								"eur",
+								"ad",
+								"sag"
+							],
+							"port": "5555",
+							"path": [
+								"rad",
+								"Employees.apis:EmployeeRestDescriptor",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alias",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "manage",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Administrator",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://vvaipresal31826.eur.ad.sag:5555/employees",
+							"protocol": "http",
+							"host": [
+								"vvaipresal31826",
+								"eur",
+								"ad",
+								"sag"
+							],
+							"port": "5555",
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for employees"
+		},
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "withoutalias",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://vvaipresal31826.eur.ad.sag:5555/rad/Employees.apis:EmployeeRestDescriptor/employee/:id",
+							"protocol": "http",
+							"host": [
+								"vvaipresal31826",
+								"eur",
+								"ad",
+								"sag"
+							],
+							"port": "5555",
+							"path": [
+								"rad",
+								"Employees.apis:EmployeeRestDescriptor",
+								"employee",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "k8cluster",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://vvaipresal31826.eur.ad.sag:5555/rad/Employees.apis:EmployeeRestDescriptor/employee/:id",
+							"protocol": "http",
+							"host": [
+								"vvaipresal31826",
+								"eur",
+								"ad",
+								"sag"
+							],
+							"port": "5555",
+							"path": [
+								"rad",
+								"Employees.apis:EmployeeRestDescriptor",
+								"employee",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "withoutalias Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "manage",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Administrator",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://vvaipresal31826.eur.ad.sag:5555/employeeid/1",
+							"protocol": "http",
+							"host": [
+								"vvaipresal31826",
+								"eur",
+								"ad",
+								"sag"
+							],
+							"port": "5555",
+							"path": [
+								"employeeid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for employee"
+		},
+		{
+			"name": "demoCircuitBreaker",
+			"item": [
+				{
+					"name": "",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "manage",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Administrator",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "num1",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "num2",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://vvaipresal31826.eur.ad.sag:5555/rad/Employees.apis:EmployeeRestDescriptor/demoCircuitBreaker",
+							"protocol": "http",
+							"host": [
+								"vvaipresal31826",
+								"eur",
+								"ad",
+								"sag"
+							],
+							"port": "5555",
+							"path": [
+								"rad",
+								"Employees.apis:EmployeeRestDescriptor",
+								"demoCircuitBreaker"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for demoCircuitBreaker"
+		},
+		{
+			"name": "demoCircuitBreakerAlt",
+			"item": [
+				{
+					"name": "",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "manage",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Administrator",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "num1",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "num2",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://vvaipresal31826.eur.ad.sag:5555/rad/Employees.apis:EmployeeRestDescriptor/demoCircuitBreakerAlt",
+							"protocol": "http",
+							"host": [
+								"vvaipresal31826",
+								"eur",
+								"ad",
+								"sag"
+							],
+							"port": "5555",
+							"path": [
+								"rad",
+								"Employees.apis:EmployeeRestDescriptor",
+								"demoCircuitBreakerAlt"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for demoCircuitBreakerAlt"
+		}
+	]
+}

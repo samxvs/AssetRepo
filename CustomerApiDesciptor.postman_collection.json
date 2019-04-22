@@ -1,0 +1,456 @@
+{
+	"info": {
+		"_postman_id": "36d9fc45-e11c-43fa-bdc7-1bf24d2a221d",
+		"name": "CustomerApiDesciptor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "customers",
+			"item": [
+				{
+					"name": "withoutalias",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "manage",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Administrator",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://vvaipresal31826.eur.ad.sag:5555/rad/Customers.apis:CustomerApiDescriptor/customers",
+							"protocol": "http",
+							"host": [
+								"vvaipresal31826",
+								"eur",
+								"ad",
+								"sag"
+							],
+							"port": "5555",
+							"path": [
+								"rad",
+								"Customers.apis:CustomerApiDescriptor",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "k8cluster",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "manage",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Administrator",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://vvaipresal31826.eur.ad.sag:5555/rad/Customers.apis:CustomerApiDescriptor/customers",
+							"protocol": "http",
+							"host": [
+								"vvaipresal31826",
+								"eur",
+								"ad",
+								"sag"
+							],
+							"port": "5555",
+							"path": [
+								"rad",
+								"Customers.apis:CustomerApiDescriptor",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alias",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "manage",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Administrator",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://vvaipresal31826.eur.ad.sag:5555/customers",
+							"protocol": "http",
+							"host": [
+								"vvaipresal31826",
+								"eur",
+								"ad",
+								"sag"
+							],
+							"port": "5555",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for customers"
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "withoutalias",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://vvaipresal31826.eur.ad.sag:5555/rad/Customers.apis:CustomerApiDescriptor/customer/:id",
+							"protocol": "http",
+							"host": [
+								"vvaipresal31826",
+								"eur",
+								"ad",
+								"sag"
+							],
+							"port": "5555",
+							"path": [
+								"rad",
+								"Customers.apis:CustomerApiDescriptor",
+								"customer",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "k8cluster",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://vvaipresal31826.eur.ad.sag:5555/rad/Customers.apis:CustomerApiDescriptor/customer/:id",
+							"protocol": "http",
+							"host": [
+								"vvaipresal31826",
+								"eur",
+								"ad",
+								"sag"
+							],
+							"port": "5555",
+							"path": [
+								"rad",
+								"Customers.apis:CustomerApiDescriptor",
+								"customer",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alias",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "manage",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Administrator",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://vvaipresal31826.eur.ad.sag:5555/customerid/1",
+							"protocol": "http",
+							"host": [
+								"vvaipresal31826",
+								"eur",
+								"ad",
+								"sag"
+							],
+							"port": "5555",
+							"path": [
+								"customerid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for customer"
+		},
+		{
+			"name": "demoCircuitBreaker",
+			"item": [
+				{
+					"name": "",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "manage",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Administrator",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "num1",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "num2",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://vvaipresal31826.eur.ad.sag:5555/rad/Customers.apis:CustomerApiDescriptor/demoCircuitBreaker",
+							"protocol": "http",
+							"host": [
+								"vvaipresal31826",
+								"eur",
+								"ad",
+								"sag"
+							],
+							"port": "5555",
+							"path": [
+								"rad",
+								"Customers.apis:CustomerApiDescriptor",
+								"demoCircuitBreaker"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for demoCircuitBreaker"
+		},
+		{
+			"name": "demoCircuitBreakerAlt",
+			"item": [
+				{
+					"name": "",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "manage",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Administrator",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "num1",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "num2",
+									"value": "2.5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://vvaipresal31826.eur.ad.sag:5555/rad/Customers.apis:CustomerApiDescriptor/demoCircuitBreakerAlt",
+							"protocol": "http",
+							"host": [
+								"vvaipresal31826",
+								"eur",
+								"ad",
+								"sag"
+							],
+							"port": "5555",
+							"path": [
+								"rad",
+								"Customers.apis:CustomerApiDescriptor",
+								"demoCircuitBreakerAlt"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for demoCircuitBreakerAlt"
+		}
+	]
+}
