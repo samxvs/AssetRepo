@@ -1,6 +1,11 @@
 pipeline {
     agent any
 	stages {
+	stage('Copy Packages from Git'){
+		steps{
+		sh '${WORKSPACE}/CopyPackageToVM.sh'
+	    }
+	}
 	stage('Create Customer docker files'){
             steps {
                 sh "${MSR_TARGET_DOCKER}/is_container.sh createPackageDockerfile -Dimage.name=is:msr -Dpackage.list=Customers -Dfile.name=CustomerMSR"
