@@ -9,7 +9,7 @@
   <value name="is_public">false</value>
   <record name="generalInfo" javaclass="com.wm.util.Values">
     <value name="specVersion">2.0</value>
-    <value name="hostName">vvaipresal31826.eur.ad.sag:5555</value>
+    <value name="hostName">localhost:5555</value>
     <value name="basePath">/rad/Customers.apis:CustomerApiDescriptor</value>
     <array name="schemes" type="value" depth="1">
       <value>http</value>
