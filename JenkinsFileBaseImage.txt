@@ -6,12 +6,6 @@ pipeline {
                 sh 'chmod -R 777 ${WORKSPACE}'
             }
         }
-	stage('Copy Packages from Git'){
-		steps{
-		sh '${WORKSPACE}/CopyPackageToVM.sh'
-	    }
-	}
-	
 	stage('Create base docker file'){
             steps {
                 sh "${MSR_TARGET_DOCKER}/is_container.sh createDockerfile "
