@@ -4,16 +4,16 @@ metadata:
   name: customer-msr-deployment
   namespace: presales-default
   labels:
-   app: customer-sagmsr
+   app: APPNAME
 spec:
   replicas: 2 # tells deployment to run 1 pod matching the template
   selector:
     matchLabels:
-      app: customer-sagmsr
+      app: APPNAME
   template: # create pods using pod definition in this template
     metadata:
         labels:
-          app: customer-sagmsr
+          app: APPNAME
     spec:
       containers:
       - name: customer-ismicroservicesruntime
@@ -27,12 +27,12 @@ spec:
 kind: Service
 apiVersion: v1	
 metadata:
-  name: customer-sagmsr-service
+  name: SERVICENAME
   namespace: presales-default
 spec:
   type: ClusterIP
   selector:
-    app: customer-sagmsr
+    app: APPNAME
   ports:
   - protocol: TCP
     port: 5555
@@ -41,20 +41,20 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: customer-sagmsr-service
+  name: SERVICENAME
   namespace: presales-default
 spec:	
   rules:
-  - host: demo-maam.daeidemo02.k8s.eur.ad.sag
+  - host: ENDPOINT.daeidemo02.k8s.eur.ad.sag
     http:
       paths:
       - backend:
-          serviceName: customer-sagmsr-service
+          serviceName: SERVICENAME
           servicePort: 5555
         path: /
   tls:
   - hosts:
-    - demo-maam.daeidemo02.k8s.eur.ad.sag
+    - ENDPOINT.daeidemo02.k8s.eur.ad.sag
     secretName: daeidemo02 
  
 
