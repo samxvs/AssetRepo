@@ -6,6 +6,15 @@ pipeline {
                 sh 'chmod -R 777 ${WORKSPACE}'
             }
         }
+	stage('Create Template'){
+            steps {
+                sh ("""
+		sed -i 's/DOCKERHUB/'"$DOCKERHUB"'/g'  ${WORKSPACE}/PushCustomerImageToK8.yaml
+		""")
+            }
+        }
+	
+	
 	stage('Push Customer image To K8'){
 		steps{
 		sh '${WORKSPACE}/DeployCustomerImageToK8.sh'
