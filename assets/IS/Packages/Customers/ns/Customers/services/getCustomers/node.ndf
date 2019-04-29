@@ -98,7 +98,7 @@
     <value name="onError">true</value>
   </record>
   <record name="circuitbreakersettings" javaclass="com.wm.util.Values">
-    <value name="enabled">true</value>
+    <value name="enabled">false</value>
     <value name="failureEvent">1</value>
     <value name="timeoutPeriod">60</value>
     <value name="failureThreshold">5</value>
