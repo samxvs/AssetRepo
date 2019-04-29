@@ -54,7 +54,7 @@ spec:
         path: /
   tls:
   - hosts:
-    - ${hostname}.daeidemo02.k8s.eur.ad.sag
+    - ${HostName}.daeidemo02.k8s.eur.ad.sag
     secretName: daeidemo02 
  
 
