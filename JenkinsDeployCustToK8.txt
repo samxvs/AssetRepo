@@ -23,6 +23,9 @@ pipeline {
 		sh ("""
 		sed -i 's/ENDPOINT/'"$ENDPOINT"'/g'  ${WORKSPACE}/PushCustomerImageToK8.yaml
 		""")
+		sh ("""
+		sed -i 's/DEPLOYMENTNAME/'"$DEPLOYMENTNAME"'/g'  ${WORKSPACE}/PushCustomerImageToK8.yaml
+		""")
             }
         }
 	
