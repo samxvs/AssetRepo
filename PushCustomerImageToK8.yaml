@@ -45,7 +45,7 @@ metadata:
   namespace: presales-default
 spec:	
   rules:
-  - host: ${hostname}.daeidemo02.k8s.eur.ad.sag
+  - host: ${HostName}.daeidemo02.k8s.eur.ad.sag
     http:
       paths:
       - backend:
