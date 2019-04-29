@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: customer-ismicroservicesruntime
-        image: maam/is:Customer2.0
+        image: maam/is:Customer1.0
         imagePullPolicy: IfNotPresent        
         ports:
         - containerPort: 5555
