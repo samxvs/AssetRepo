@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: customer-ismicroservicesruntime
-        image: ${DockerHubImage}
+        image: maam/is:Customer2.0
         imagePullPolicy: IfNotPresent        
         ports:
         - containerPort: 5555
@@ -45,7 +45,7 @@ metadata:
   namespace: presales-default
 spec:	
   rules:
-  - host: ${HostName}.daeidemo02.k8s.eur.ad.sag
+  - host: demo-maam.daeidemo02.k8s.eur.ad.sag
     http:
       paths:
       - backend:
@@ -54,7 +54,7 @@ spec:
         path: /
   tls:
   - hosts:
-    - ${HostName}.daeidemo02.k8s.eur.ad.sag
+    - demo-maam.daeidemo02.k8s.eur.ad.sag
     secretName: daeidemo02 
  
 
