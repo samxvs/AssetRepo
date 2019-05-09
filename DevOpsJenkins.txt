@@ -6,29 +6,24 @@ pipeline {
                 sh 'chmod -R 777 ${WORKSPACE}'
             }
         }
-		stage('Review'){
+	stage('Build'){
             steps {
-                sh "Scripts/Review.sh"
+                sh "/opt/softwareag/common/AssetBuildEnvironment/bin/build.sh"
             }
         }
-		stage('Build'){
-            steps {
-                sh "/opt/softwareag103/common/AssetBuildEnvironment/bin/build.sh"
-            }
-        }
-		stage('Cleanup'){
+	stage('Cleanup'){
             steps {
                 sh 'chmod -R 777 /opt/CI/builds/'
             }
         }
         stage('CreateProject') {
             steps {
-				sh "/opt/softwareag103/IntegrationServer/instances/default/packages/WmDeployer/bin/projectautomatorUnix.sh ${WORKSPACE}/ProjectAutomator_Full.xml"
+	    	sh "/opt/softwareag103/IntegrationServer/instances/default/packages/WmDeployer/bin/projectautomatorUnix.sh ${WORKSPACE}/ProjectAutomator_Full.xml"
             }
         }
-		stage('Deploy') {
+	stage('Deploy') {
             steps {
-				sh "/opt/softwareag103/IntegrationServer/instances/default/packages/WmDeployer/bin/Deployer.sh --deploy -dc SDIS_DEPLOYMENTCANDIDATE -project SDIS_PROJECT -host vmdexcel.eur.ad.sag -port 5555 -user Administrator -pwd manage"
+		sh "/opt/softwareag103/IntegrationServer/instances/default/packages/WmDeployer/bin/Deployer.sh --deploy -dc SDIS_DEPLOYMENTCANDIDATE -project SDIS_PROJECT -host vmdexcel.eur.ad.sag -port 5555 -user Administrator -pwd manage"
             }
         }
  	stage('Test') {
