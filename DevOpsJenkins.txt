@@ -8,8 +8,6 @@ pipeline {
         }
 	stage('Build'){
             steps {
-	    
-		sh 'chmod -R 777 /opt/softwareag/common/AssetBuildEnvironment/'
 		sh "/opt/softwareag/common/AssetBuildEnvironment/bin/build.sh"
             }
         }
