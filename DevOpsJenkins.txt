@@ -18,7 +18,7 @@ pipeline {
         }
         stage('CreateProject') {
             steps {
-	    	sh "/opt/softwareag103/IntegrationServer/instances/default/packages/WmDeployer/bin/projectautomatorUnix.sh ${WORKSPACE}/ProjectAutomator_Full.xml"
+	    	sh "/opt/softwareag/IntegrationServer/instances/default/packages/WmDeployer/bin/projectautomatorUnix.sh ${WORKSPACE}/ProjectAutomator_Full.xml"
             }
         }
 	stage('Deploy') {
