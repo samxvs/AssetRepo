@@ -4,6 +4,7 @@ pipeline {
         stage('Initialize'){
             steps {
                 sh 'chmod -R 777 ${WORKSPACE}'
+		sh 'chmod -R 777 "/opt/softwareag/"
             }
         }
 	stage('Build'){
