@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DeployerSpec exitOnError="true" sourceType="Repository">
         <DeployerServer>
-                <host>vvaipresal32991.eur.ad.sag:5555</host>
+                <host>localhost:5555</host>
                 <user>Administrator</user>
                 <pwd>manage</pwd>
         </DeployerServer>
@@ -22,18 +22,7 @@
                                         <pwd>manage</pwd>
                                         <useSSL>false</useSSL>
                                         <version>10.3</version>
-                                        <installDeployerResource>false</installDeployerResource>
-                                        <Test>false</Test>
-                                        <executeACL>Administrators</executeACL>
-                        </isalias>
-                        <isalias name="DEV_IS_ALIAS">
-                                        <host>vvaipresal32991.eur.ad.sag</host>
-                                        <port>5555</port>
-                                        <user>Administrator</user>
-                                        <pwd>manage</pwd>
-                                        <useSSL>false</useSSL>
-                                        <version>10.3</version>
-                                        <installDeployerResource>false</installDeployerResource>
+                                        <installDeployerResource>true</installDeployerResource>
                                         <Test>false</Test>
                                         <executeACL>Administrators</executeACL>
                         </isalias>
@@ -52,8 +41,7 @@
                 </DeploymentSet>
                 <DeploymentMap description="" name="FHB_DEPLOYMENTMAP"/>
                         <MapSetMapping mapName="FHB_DEPLOYMENTMAP" setName="FHB_DEPLOYMENTSET">
-                                <alias type="IS">DEV_IS_ALIAS</alias>
-                                <alias type="IS">MAAM</alias>
+                                <alias type="IS">FHBTEST</alias> 
                         </MapSetMapping>
                 <DeploymentCandidate description="" mapName="FHB_DEPLOYMENTMAP" name="FHB_DEPLOYMENTCANDIDATE"/>
         </Project>
