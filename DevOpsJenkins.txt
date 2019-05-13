@@ -13,7 +13,7 @@ pipeline {
         }
 	stage('Cleanup'){
             steps {
-                sh 'chmod -R 777 /opt/CI/builds/'
+                sh 'chmod -R 777 /opt/CI/builds/IS'
             }
         }
         stage('CreateProject') {
