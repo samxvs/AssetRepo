@@ -38,6 +38,7 @@
                 </ProjectProperties>
                 <DeploymentSet autoResolve="full" description="" name="FHB_DEPLOYMENTSET" srcAlias="FHB_REPOSITORY">
                 <Composite displayName="FHBWorkOrderBusLyr" name="FHBWorkOrderBusLyr" srcAlias="FHB_REPOSITORY" type="IS"/>
+                 </DeploymentSet>
                 <DeploymentMap description="" name="FHB_DEPLOYMENTMAP"/>
                         <MapSetMapping mapName="FHB_DEPLOYMENTMAP" setName="FHB_DEPLOYMENTSET">
                                 <alias type="IS">FHBTEST</alias> 
