@@ -28,7 +28,7 @@ pipeline {
         }
  	stage('Test') {
 		steps {
-		    sh "Scripts/Test.sh"
+		    sh "${WORKSPACE}/Test.sh"
 			junit 'reports/*.xml'
             }
         }
