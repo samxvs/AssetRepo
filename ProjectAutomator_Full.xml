@@ -9,7 +9,7 @@
                 <Repository>
                         <repalias name="FHB_REPOSITORY">
                         <type>FlatFile</type>
-                        <urlOrDirectory>/opt/CI/builds/</urlOrDirectory>
+                        <urlOrDirectory>/opt/CI/builds/IS</urlOrDirectory>
                         <createIndex>false</createIndex>
                         <Test>false</Test>
                         </repalias>
