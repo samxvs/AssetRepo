@@ -34,7 +34,7 @@
                 <Property name="projectLocking">false</Property>
                 <Property name="concurrentDeployment">true</Property>
                 <Property name="ignoreMissingDependencies">true</Property>
-                <Property name="isTransactionalDeployment">false</Property>
+                <Property name="isTransactionalDeployment">true</Property>
                 </ProjectProperties>
                 <DeploymentSet autoResolve="full" description="" name="FHB_DEPLOYMENTSET" srcAlias="FHB_REPOSITORY">
                 <Composite displayName="Fibonachi" name="Fibonachi" srcAlias="FHB_REPOSITORY" type="IS"/>
