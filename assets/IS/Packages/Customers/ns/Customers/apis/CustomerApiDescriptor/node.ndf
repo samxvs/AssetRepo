@@ -62,7 +62,7 @@
               <value name="source">FORMDATA</value>
               <value name="type">STRING</value>
               <value name="description"></value>
-              <Boolean name="isRequired">true</Boolean>
+              <Boolean name="isRequired">false</Boolean>
               <Boolean name="isArray">false</Boolean>
               <null name="defaultValue"/>
               <null name="refDefinition"/>
