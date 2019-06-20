@@ -128,6 +128,19 @@
         <value name="email">87678</value>
       </record>
     </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="name">567</value>
+      <value name="id">567</value>
+      <record name="address" javaclass="com.wm.util.Values">
+        <value name="line1">567</value>
+        <value name="city">567</value>
+        <value name="state">576</value>
+      </record>
+      <record name="contact" javaclass="com.wm.util.Values">
+        <value name="phone">576</value>
+        <value name="email">567</value>
+      </record>
+    </record>
   </array>
   <record name="type" javaclass="com.wm.util.Values">
     <value name="node_type">record</value>
