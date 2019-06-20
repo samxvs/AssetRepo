@@ -115,19 +115,6 @@
         <value name="email">87678</value>
       </record>
     </record>
-    <record javaclass="com.wm.util.Values">
-      <value name="name">John and Sons</value>
-      <value name="id">2</value>
-      <record name="address" javaclass="com.wm.util.Values">
-        <value name="line1">345 State St</value>
-        <value name="city">Herndon</value>
-        <value name="state">VA</value>
-      </record>
-      <record name="contact" javaclass="com.wm.util.Values">
-        <value name="phone">987-654-3210</value>
-        <value name="email">contact@johnandsons.com</value>
-      </record>
-    </record>
   </array>
   <record name="type" javaclass="com.wm.util.Values">
     <value name="node_type">record</value>
@@ -893,7 +880,6 @@
     <value name="field_name">debugLogInput</value>
     <value name="field_type">record</value>
     <value name="field_dim">0</value>
-    <value name="wrapper_type">IData</value>
     <value name="nillable">true</value>
     <value name="form_qualified">false</value>
     <value name="is_global">false</value>
