@@ -115,19 +115,6 @@
         <value name="email">rty</value>
       </record>
     </record>
-    <record javaclass="com.wm.util.Values">
-      <value name="name">iuyuiy</value>
-      <value name="id">3</value>
-      <record name="address" javaclass="com.wm.util.Values">
-        <value name="line1">jh</value>
-        <value name="city">bkg</value>
-        <value name="state">jkhkj</value>
-      </record>
-      <record name="contact" javaclass="com.wm.util.Values">
-        <value name="phone">67858</value>
-        <value name="email">87678</value>
-      </record>
-    </record>
   </array>
   <record name="type" javaclass="com.wm.util.Values">
     <value name="node_type">record</value>
@@ -443,6 +430,10 @@
 
 <MAPCOPY FROM="/Customers;4;0;Customers.documents:customers" TO="/Customers;4;0;Customers.documents:customers">
 </MAPCOPY>
+</MAP>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>demo added</COMMENT>
 </MAP>
 
 <BRANCH TIMEOUT="" SWITCH="/id">
