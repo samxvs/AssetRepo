@@ -102,19 +102,6 @@
         <value name="email">contact@acme.com</value>
       </record>
     </record>
-    <record javaclass="com.wm.util.Values">
-      <value name="name">reuyer</value>
-      <value name="id">rty</value>
-      <record name="address" javaclass="com.wm.util.Values">
-        <value name="line1">rty</value>
-        <value name="city">rty</value>
-        <value name="state">rty</value>
-      </record>
-      <record name="contact" javaclass="com.wm.util.Values">
-        <value name="phone">rty</value>
-        <value name="email">rty</value>
-      </record>
-    </record>
   </array>
   <record name="type" javaclass="com.wm.util.Values">
     <value name="node_type">record</value>
@@ -433,7 +420,7 @@
 </MAP>
 
 <MAP TIMEOUT="" MODE="STANDALONE">
-  <COMMENT>demo added</COMMENT>
+  <COMMENT></COMMENT>
 </MAP>
 
 <BRANCH TIMEOUT="" SWITCH="/id">
